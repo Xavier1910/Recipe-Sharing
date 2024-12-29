@@ -1,0 +1,182 @@
+
+#ViewRecipeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 90%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.BackButton,.DeleteButton {
+    position: relative;
+    right: 35%;
+    width: 20%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: var(--secondary3) ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.DeleteButton{
+    background-color: var(--primary) ;
+
+}
+
+.BackButton:hover {
+    background-color: var(--Add);
+}
+.RecipeName_Rating{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.RecipeInfo{
+    height: 90%;
+    width: 90%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 70px;
+}
+.RecipeImage{
+    text-align: center;
+    height: 100%;
+}
+.RecipeImage img{
+    width: 100%;
+    height:500px;
+    border-radius: 10px;
+}
+
+.RecipeImage h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+#RecipeDetails {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.RecipeIngredients{
+    font-size: 1.3em;
+}
+.RecipeIngredients ul {
+    margin-top: 40px;
+}
+
+
+#RecipeDetails p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+.RecipeCookingSteps {
+    width: 90%;
+}
+.RecipeCookingSteps ol {
+    position: relative;
+    top: 20px;
+}
+.RecipeCookingSteps ol li{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#RecipeRating {
+    font-size: 1.1rem;
+    color: #888;
+}
+.RatingSection{
+    margin-top: 30px;
+    width: 90%;
+}
+.RatingItem h4{
+    width: 15%;
+    margin-bottom: 0;
+    font-size: 1.1em;
+}
+.RatingItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.PostRatingButton{
+    width: 20%;
+}
+
+@media (max-width: 768px) {
+    .BackButton {
+        position: relative;
+        right: 0;
+        width: 50%;
+    }
+    .RecipeName_Rating{
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    .RecipeInfo{
+        height: fit-content;
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    .RecipeImage{
+        text-align: center;
+    }
+    .RecipeImage img{
+        width: 80%;
+        height: 70%;
+    }
+
+    .RecipeImage h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #333;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    #RecipeDetails p {
+        font-size: 1rem;
+    }
+    #RecipeRating {
+        font-size: 1rem;
+    }
+    .backButton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .RatingItem h4{
+        width: 50%;
+        margin-bottom: 0;
+        font-size: 1.1em;
+    }
+    .RatingItem{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .PostRatingButton{
+        width: 50%;
+    }
+}

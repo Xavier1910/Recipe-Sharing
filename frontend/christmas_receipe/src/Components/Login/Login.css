@@ -1,0 +1,148 @@
+#LoginContainer{
+    width: 100dvw;
+    height: 100dvh;
+}
+.backgroundImage img{
+    width: 100dvw;
+    height: 100dvh;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.loginBox {
+    position: relative;
+    top: 15%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ff1500;
+    background: rgb(255, 0, 0);
+    box-shadow: 0 8px 32px 0 rgba(219, 81, 81, 0.57);
+    backdrop-filter: blur( 14px );
+    -webkit-backdrop-filter: blur( 14px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .loginBox h1{
+    color: #ffffff;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 1px black;
+    
+  }
+  
+  .userNameBox,
+  .PasswordBox,
+  .UserEmailBox {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+    color: #ffffff; 
+    font-family: 'Arial', sans-serif;
+  }
+  
+  #UserName,
+  #Password,
+  #UserEmail,
+  #C_Password
+  {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-family: 'Arial', sans-serif !important;
+  }
+  #UserName:focus,
+  #Password:focus,
+  #UserEmail:focus,
+  #C_Password:focus
+{
+    background-color: transparent;
+    color: white;
+    outline: none !important;
+    box-shadow: none; 
+}
+  
+  button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    font-size: 18px;
+    background-color: #388e3c; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  button[type="button"] {
+    background-color: #ff6f61; 
+  }
+  
+  button:hover {
+    background-color: #00695c; 
+  }
+  
+  button[type="button"]:hover {
+    background-color: #e64a19; 
+  }
+  
+  
+  label,
+  button {
+    font-family: 'Times New Roman', Times, serif; 
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #2c6b2f;
+  }
+  
+  @media (max-width: 600px) {
+    .loginBox {
+      padding: 20px;
+      margin: 0 auto;
+    }
+  
+    .userNameBox,
+    .PasswordBox,
+    .UserEmailBox {
+      margin-bottom: 15px;
+    }
+  
+    label {
+      font-size: 14px;
+    }
+  
+    #UserName,
+    #Password,#UserEmail {
+      font-size: 18px;
+      padding: 14px;
+    }
+  
+    button {
+      font-size: 16px;
+      padding: 16px;
+    }
+  
+    .loginBox::before {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+  }
+  
+  
