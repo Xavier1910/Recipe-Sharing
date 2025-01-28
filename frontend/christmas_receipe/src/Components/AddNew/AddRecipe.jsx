@@ -6,15 +6,14 @@ const AddRecipe = ({onback}) => {
   const userEmail = localStorage.getItem("email");
   const [recipe, setRecipe] = useState({
     user_email: userEmail,
-    recipe_name: "chicken varuval",
-    recipe_description: "qweroiwjvnwkjvnkjw",
-    category: "Main Course",
+    recipe_name: "",
+    recipe_description: "",
+    category: "",
     ingredients: [
-      { ingredient: "Chicken", quantity: "500", unit: "kg" },
-      { ingredient: "paprika", quantity: "1", unit: "tsp" },
+      { ingredient: "", quantity: "", unit: "" },
     ],
     image: "/images/placeholder.png",
-    steps: ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "qqqqqqqqqqqqqqqqqqqqqq"],
+    steps: ["", ""],
   });
 
   const ingredientUnits = ["g", "kg", "ml", "l", "cup", "tbsp", "tsp", "piece"];
