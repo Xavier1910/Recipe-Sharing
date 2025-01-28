@@ -9,11 +9,14 @@ const ViewRecipe = ({ selectedRecipe, onBack, text }) => {
   const [recipe, setRecipes] = useState([]);
   const [recipeRating, setRecipeRating] = useState(0);
   const [updatedRecipe, setUpdatedRecipe] = useState(null);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     const getRecipes = async () => {
       try {
+        const user = await axios.get("http://localhost:8080/api/users");
         const fetchedRecipes = await fetchRecipes();
+        setUsers(user.data);
         setRecipes(fetchedRecipes);
       } catch (error) {
         console.error("Error fetching recipes:", error);
@@ -29,6 +32,7 @@ const ViewRecipe = ({ selectedRecipe, onBack, text }) => {
   if (!recipeDetails) {
     return <div>Recipe not found!</div>;
   }
+
 
   const userEmail = localStorage.getItem("email");
 
@@ -126,7 +130,14 @@ const ViewRecipe = ({ selectedRecipe, onBack, text }) => {
   if (rating.length > 0) {
     userRating = rating.find((r) => r.userEmail === userEmail)?.rating;
   }
-
+  console.log(displayRecipe)
+  let userDetail
+ if(displayRecipe){
+  userDetail = users.filter(
+    (user) => user.email === displayRecipe.userEmail
+  );
+  
+ }
   return (
     <div id="ViewRecipeContainer">
       <button onClick={onBack} className="BackButton">
@@ -142,7 +153,7 @@ const ViewRecipe = ({ selectedRecipe, onBack, text }) => {
           <div className="RecipeName_Rating">
             <div className="Recipe_name_author">
               <h1>{displayRecipe.recipeName}</h1>
-              <p>posted by </p>
+              <p>posted by {userDetail[0].name}</p>
             </div>
             <div id="RecipeRating">
               <span>

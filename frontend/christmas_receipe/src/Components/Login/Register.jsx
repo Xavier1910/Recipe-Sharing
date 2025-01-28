@@ -33,7 +33,7 @@ const Register = () => {
         password: password,
       };
       const userResponse = await axios.get(`http://localhost:8080/api/email/${UserEmail}`);
-      console.log(userResponse);
+      // console.log(userResponse);
       
       if (userResponse.data!== null) {
         alert("Email already exists . Try Log In");
